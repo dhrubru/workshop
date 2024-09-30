@@ -1,0 +1,24 @@
+import sys 
+import os.path
+fname=input("enter the file name")
+if not os.path.isfile(fname):
+    print(fname,"does not exist")
+    sys.exit(0)
+infile=open(fname,"r")
+mylist=infile.readlines()
+linelist=[]
+for line in mylist:
+    linelist.append(line.strip())
+    linelist.sort()
+outfile=open("sorted.txt","w")
+for line in linelist:
+    outfile.write(line+ "\n")
+infile.close()
+outfile.close()
+if os.path.isfile("sorted.txt"):
+    print("the sorted content exists on this sorted.txt file")
+    print("the sorted contents are")
+    print("=======================")
+rdfile=open("sorted.txt","r")
+for line in rdfile:
+    print(line, end=" ")

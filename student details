@@ -1,0 +1,24 @@
+class Student:
+    def __init__(self,name=" ",usn=" ",score=[0,0,0,0]):
+        self.name= name
+        self.usn=usn
+        self.score=score
+    def getmarks(self):
+         self.name= input("enter your name")
+         self.usn= input("enter your usn")
+         self.score[0]=int(input("enter your marks1"))
+         self.score[1]=int(input("enter your marks2"))
+         self.score[3]=int(input("enter your marks3"))
+    def display(self):
+        sp="="*55
+        print(sp)
+        print("STUDENT DETAILS".center(81))
+        print(sp)
+        print("%15s"%('name'),"%12s"%('usn'),"%8s"%('score1'),"%8s"%('score2'),"%8s"%('score3'),"%8s"%('scoret'),"%8s"%("percentage"))
+        print(sp)
+        print("%15s"%self.name,"%12s"%self.usn,"%8s"%self.score[0],"%8s"%self.score[1],"%8s"%self.score[2],"%8s"%self.score[3],"%8s"%p)
+def main():
+    s1=Student()
+    s1.getmarks()
+    s1.display()
+main()

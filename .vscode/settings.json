@@ -1,0 +1,5 @@
+{
+    "code-runner.fileDirectoryAsCwd": true,
+    "editor.guides.highlightActiveBracketPair": true,
+    "editor.guides.bracketPairs": true
+}

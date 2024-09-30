@@ -1,0 +1,6 @@
+n=input("enter the number ")
+print("entered number is",n)
+unique=set(n)
+for elements in unique:
+    print("element",elements,"occurs",n.count(elements))
+    

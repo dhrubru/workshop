@@ -1,0 +1,20 @@
+from math import sqrt 
+mylist=[]
+n=int(input("enter the number of elements in list "))
+t=0
+for i in range(n):
+    mylist.append(int(input("enter the elements of the list ")))
+print(" the length of the list",len(mylist))
+print("list contents are",mylist)
+total=0
+for elements in mylist:
+    total=total+elements 
+mean=total/n
+total=0
+for elements in mylist:
+    total=total+(elements-mean)*(elements-mean)
+variance=total/n
+std=sqrt(variance)
+print("standard deviation=","%.2f"%std)
+print("variance=",variance)
+print(" mean =",mean)

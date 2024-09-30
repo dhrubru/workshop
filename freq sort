@@ -1,0 +1,25 @@
+import sys 
+import string 
+import os.path
+fname=input("enter the file name")
+if not os.path.isfile(fname):
+    print("yo, file does'nt exist")
+    sys.exit(0)
+filecontent=""
+infile= open(fname, "r")
+for line in infile: 
+    for ch in line:
+        if ch not in string.punctuation:
+            filecontent=filecontent+ch
+        else:
+            filecontent=filecontent+" "
+wordfreq = {}
+wordlist=filecontent.split()
+for word in wordlist:
+    if word not in wordfreq.keys():
+        wordfreq[word]=1
+    else:
+        wordfreq[word]=wordfreq[word]+1
+sortedwordfreq=sorted (wordfreq.items(),key=lambda x:x[1],reverse=True)
+for i in range(10):
+    print(sortedwordfreq[i][0],"occurs",sortedwordfreq[i][1],"times")
